@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-05-15T21:22:19+08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "ISSS608 Group 06 VAST Challenge",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-05-15T21:30:18+08:00"
+    }
+  ],
+  "collections": []
+}

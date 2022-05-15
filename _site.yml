@@ -1,0 +1,19 @@
+name: "ISSS608_Group06"
+title: "VAST Challenge"
+description: |
+  ISSS608 Visual Analytics Group 06 Project
+output_dir: "_site"
+navbar:
+  left:
+    - text: "Proposal"
+    - text: "Poster"
+    - text: "Application"
+    - text: "Application User Guide"
+    - text: "Research Paper"
+ 
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
