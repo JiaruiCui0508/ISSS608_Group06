@@ -1,7 +1,7 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+  Group member: Li Minqi, Cui Jiarui, Sui Tianyue
 ---
 
 ```{r setup, include=FALSE}
