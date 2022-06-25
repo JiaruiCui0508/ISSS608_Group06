@@ -1,7 +1,6 @@
 ---
 title: "About this site"
-description: |
-  Group member: Li Minqi, Cui Jiarui, Sui Tianyue
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
