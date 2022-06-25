@@ -7,8 +7,9 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Proposal"
-      href: Proposal.html
+      href: Proposal1.html
     - text: "Poster"
+      href: poster.html
     - text: "Application"
     - text: "Application User Guide"
     - text: "Research Paper"

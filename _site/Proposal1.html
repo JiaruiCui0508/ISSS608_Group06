@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="kay" />
 
+<meta name="date" content="2022-06-25" />
 
-<title>About R Markdown</title>
+<title>Proposal</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -272,37 +274,109 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About R Markdown</h1>
+<h1 class="title toc-ignore">Proposal</h1>
+<h4 class="author">kay</h4>
+<h4 class="date">2022-06-25</h4>
 
 </div>
 
 
-<style type="text/css">
-.title {
-  display: none;
-}
-
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-<div class="row" style="padding-top: 30px;">
-<div id="description" class="section level1 col-sm-6"
-style="padding-top: 0px;">
-<h1 style="padding-top: 0px;"><strong>Description</strong></h1>
-<p>Anticipating rapid growth, the city of Engagement, Ohio USA is doing
-a participatory urban planning exercise to understand the current state
-of the city and identify opportunities for future growth. About 1000
-representative residents in this modest-sized city have agreed to
-provide data using the city’s urban planning app, which records the
-places they visit, their spending, and their purchases, among other
-things. From these volunteers, the city will have data to assist with
-their major community revitalization efforts, including how to allocate
-a very large city renewal grant they have recently received.</p>
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>The dataset was from VAST Challenge 2022. Mainly two folders of data
+will be used in this report, namely attribute and journal. This dataset
+provides information of participants on their financial activities,
+daily routine, and social network.</p>
 </div>
-<div class="col-sm-6">
-<p><img src="Group6/city.jpeg" /></p>
+<div id="problem-statement" class="section level1">
+<h1>Problem statement</h1>
+<p>In this study, we will focus on the financial health of the city.
+Over time, are businesses growing or shrinking? How are people changing
+jobs? Are standards of living improving or declining over time?</p>
+<p>Considering the financial status of Engagement’s businesses and
+residents, we will use visual analytic techniques to address below
+questions:</p>
+<p>Over the period covered by the dataset, which businesses appear to be
+more prosperous? Which appear to be struggling?</p>
+<p>How does the financial health of the residents change over the period
+covered by the dataset? How do wages compare to the overall cost of
+living in Engagement? Are there groups that appear to exhibit similar
+patterns?</p>
+<p>Describe the health of the various employers within the city limits.
+What employment patterns do you observe?</p>
+</div>
+<div id="methodology" class="section level1">
+<h1>Methodology</h1>
+<p>To develop the dashboard, we decided to carry out the following
+steps:</p>
+<p><strong>Data wrangling and transformation</strong>: The dataset
+contains 12 tabs of data. Especially, financial journal, social network,
+and travel journal are all bigger than 50MB. Therefore, we need to
+transform the data into RDS format which can be read by the R
+packages.</p>
+<p><strong>Exploratory data analysis (EDA)</strong>: We will use
+suitable graphical and time series decomposition methods to expose the
+seasonal patterns</p>
+<p><strong>Interactive dashboard</strong>: Our team will use different R
+packages to extract, analyze, and build an interactive R Shiny
+application to illustrate the financial health of the target city.</p>
+</div>
+<div id="solution" class="section level1">
+<h1>Solution</h1>
+<div id="business-performance" class="section level2">
+<h2>Business performance</h2>
+<p>According to the observation of the dataset, we classified the
+business in the city into three types, which are food, education, and
+apartment lease. In our application, different types of business will be
+evaluated by different criteria and methods.</p>
+<p>In food territory, there are two types of dinning place in this city,
+namely pub and restaurants. In our study, we will evaluate the business
+performance based on number of visit and revenue.</p>
+<p>Performance of education business will be evaluated based on the
+number of people pay for education and the total revenue.</p>
+<p>Lastly, in view of apartment leasing, we will focus on the population
+of tenants, revenue and unit price.</p>
+</div>
+<div id="financial-health" class="section level2">
+<h2>Financial Health</h2>
+<p>According to Investopedia, the measurement financial health includes
+the amount of savings as well as the spending on fixed or
+non-discretionary expenses.</p>
+<p><strong>Monthly average savings</strong></p>
+<p>Build up a table taking summing up the transaction amounts grouped by
+participantID and month. Use barchart / linechart to represent the
+change over time. Facet wraps are adopted for comparison across
+different groups such as education level and age.</p>
+<p><strong>Expenditure structure</strong></p>
+<p>Group the financial journal into major categories and compare the
+total expenditure with monthly income. A stacked barchart would be to
+reveal the proportion and comparison.</p>
+</div>
+<div id="employment-health" class="section level2">
+<h2>Employment health</h2>
+<p>In order to visualize the employment patterns effectively, a
+multi-pronged approach will be considered. As the employment patterns
+and employer health both are correlative of turnover, so we prefer to
+start from turnover calculation at first. Then conduct using tmap
+package, sf package to visualize employer distribution by turnover rate.
+At last, looking into different attributes of employee (age, education
+level, salary base, etc.) by different turnover level to identify
+employer health and employment patterns.</p>
+<p><strong>Distribution of employer by turnover rate</strong></p>
+<p>Complete turnover computation and leveraging hexagon binning map to
+show up turnover rate by color and add DT table to interactively
+displaying detail information of the company.</p>
+<p><strong>Employment pattern exploration</strong></p>
+<p>Analyze employee structure from age, education, salary perspectives
+to identify employment patterns. For age portion, use violin and box
+plot to recognize distribution. For education level, we will conduct
+staked bar chart with percent information. For salary portion, we will
+apply to line charts to display whether there’s fluctuation among
+education levels.</p>
+<p>Scripts can be viewed <a
+href="Proposal/Scripts.pdf"><code>here</code></a></p>
+</div>
+</div>
 
 
 

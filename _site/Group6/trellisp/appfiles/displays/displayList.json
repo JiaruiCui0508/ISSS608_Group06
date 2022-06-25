@@ -1,0 +1,12 @@
+[
+  {
+    "group": "common",
+    "name": "by_venueId",
+    "desc": "Monthly Customer Visits and revenue",
+    "n": 32,
+    "height": 500,
+    "width": 1000,
+    "updated": "2022-06-25 21:44:03",
+    "keySig": "91c99e12b93dae08fee017102fefb0ff"
+  }
+]
