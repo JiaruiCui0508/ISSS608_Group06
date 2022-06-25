@@ -1,11 +1,6 @@
 ---
 title: "Proposal"
-description: |
-  ISSS608 Visual Analytics Group 06 Project
-author:
-  - name: LI Minqi, CUI Jiarui, SUI Tianyue
-date: "`r Sys.Date()`"
-output: distill::distill_article
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
