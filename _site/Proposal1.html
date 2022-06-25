@@ -9,9 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="kay" />
 
-<meta name="date" content="2022-06-25" />
 
 <title>Proposal</title>
 
@@ -275,82 +273,128 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Proposal</h1>
-<h4 class="author">kay</h4>
-<h4 class="date">2022-06-25</h4>
 
 </div>
 
 
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>The dataset was from VAST Challenge 2022. Mainly two folders of data
-will be used in this report, namely attribute and journal. This dataset
-provides information of participants on their financial activities,
-daily routine, and social network.</p>
+<p>Aware of the booming willingness of purchasing properties in the city
+of Engagement, Ohio, previously the sleepy bedroom community, the
+government of Engagement is conducting a participatory urban planning
+exercise. The research would help the government understand the current
+state of the city, so as to reach a more accurate view of Engagement’s
+future potential.</p>
+<p>The research collects the life trace of 1000 representatives via the
+urban planning app, which keeps detailed track of their daily
+activities, travels, and expenditure. Through the analysis of the
+participant attributes and their daily routines, the city is enabled to
+determine the allocation of vast renewal grant for major neighbourhood
+revitalization. This study aims to reveal the insights from the
+collected data.</p>
 </div>
 <div id="problem-statement" class="section level1">
 <h1>Problem statement</h1>
-<p>In this study, we will focus on the financial health of the city.
-Over time, are businesses growing or shrinking? How are people changing
-jobs? Are standards of living improving or declining over time?</p>
+<p>In this study, we will work on Challenge 3 - Economic from VAST
+Challenge 2022. This challenge considers the financial health of the
+city. Over time, are businesses growing or shrinking? How are people
+changing jobs? Are standards of living improving or declining over
+time?</p>
 <p>Considering the financial status of Engagement’s businesses and
 residents, we will use visual analytic techniques to address below
-questions:</p>
-<p>Over the period covered by the dataset, which businesses appear to be
-more prosperous? Which appear to be struggling?</p>
-<p>How does the financial health of the residents change over the period
-covered by the dataset? How do wages compare to the overall cost of
-living in Engagement? Are there groups that appear to exhibit similar
-patterns?</p>
-<p>Describe the health of the various employers within the city limits.
-What employment patterns do you observe?</p>
+questions.</p>
+<p><strong>1. Over the period covered by the dataset, which businesses
+appear to be more prosperous? Which appear to be struggling? </strong>
+To answer this question, we will evaluate a business’s performance by
+its number of participants’ visit and revenues earning. We will use the
+data of ‘Check-In Journal’ and ‘Financial Journal’ to complete the
+analysis.</p>
+<p><strong>2. How does the financial health of the residents change over
+the period covered by the dataset? How do wages compare to the overall
+cost of living in Engagement? Are there groups that appear to exhibit
+similar patterns?</strong> The dataset of ‘Financial Journal’ will be
+used in this question to understand the income of the participants, as
+well as their expenditure in food, recreation, and shelter. We will also
+partition the participant into different groups based on their
+education, interest group, age, etc. By comparing the income and
+expenditure of the participants within the group and with other groups,
+we will find out if there is any similar patterns.</p>
+<p><strong>3. Describe the health of the various employers within the
+city limits. What employment patterns do you observe? </strong> In this
+section, we will mainly use dataset of ‘Jobs’ and ‘Employers’ to analyse
+the turnover. By deriving which employers have the highest turnover
+rate, we can explore what similar patterns do this kind of employers
+have, and vice versa. For the perspective of employees, we will consider
+their age, education, and household to find out if there is any
+influence on their employment status.</p>
 </div>
 <div id="methodology" class="section level1">
 <h1>Methodology</h1>
-<p>To develop the dashboard, we decided to carry out the following
-steps:</p>
-<p><strong>Data wrangling and transformation</strong>: The dataset
-contains 12 tabs of data. Especially, financial journal, social network,
-and travel journal are all bigger than 50MB. Therefore, we need to
-transform the data into RDS format which can be read by the R
-packages.</p>
-<p><strong>Exploratory data analysis (EDA)</strong>: We will use
-suitable graphical and time series decomposition methods to expose the
-seasonal patterns</p>
-<p><strong>Interactive dashboard</strong>: Our team will use different R
-packages to extract, analyze, and build an interactive R Shiny
-application to illustrate the financial health of the target city.</p>
+<p><strong>Dataset Used</strong>: As challenge three covers 3 different
+topics, below detailed datasets will be used respectively. Financial
+Health: FinancialJournal.csv, Participants.csv Business Performance:
+CheckinJournal.csv, Restaurants.csv, Pubs.csv, FinancialJournal.csv
+Employment Health: CheckinJournal.csv, Participants.csv, Jobs.csv,
+Employers.csv</p>
+<p><strong>Data Preparation</strong>: This session is used to understand
+the nature of data and proceed data cleaning. We need to understand the
+characteristics, format, and quality of data. Data cleaning will be done
+using Excel and R. Excel is used as the first preliminary data cleaning
+to remove columns that will not be used and simply combination with
+binary columns into a single column. Then for filter and chop with
+specific conditions and further analysis indicator calculation, we will
+use R.</p>
+<p><strong>Shiny Application</strong>: The page of the visualization
+would be our Exploratory Data Analysis (EDA). In our EDA, we will
+explore from 3 different options splitting by 3 tabs in Shiny. We will
+have visualizations for business performance using line chart, including
+education business , apartment leasing. Then use line charts, cycle
+chart to display financial health. The tmap will have us to expose
+turnover information based on city map. Then to plot stacked chart,
+violine chart with participant, employer datasets to display employment
+health.</p>
+<p><strong>R package to be used</strong>:</p>
+<p><img src="Group6/package.JPG" /></p>
 </div>
 <div id="solution" class="section level1">
 <h1>Solution</h1>
 <div id="business-performance" class="section level2">
 <h2>Business performance</h2>
-<p>According to the observation of the dataset, we classified the
-business in the city into three types, which are food, education, and
-apartment lease. In our application, different types of business will be
-evaluated by different criteria and methods.</p>
-<p>In food territory, there are two types of dinning place in this city,
-namely pub and restaurants. In our study, we will evaluate the business
-performance based on number of visit and revenue.</p>
-<p>Performance of education business will be evaluated based on the
-number of people pay for education and the total revenue.</p>
-<p>Lastly, in view of apartment leasing, we will focus on the population
-of tenants, revenue and unit price.</p>
+<p>The dataset provided by VAST Challenge 2022 presents business in food
+territory. According to our observation, we classified the business into
+two types, which are restaurants and pubs. In our application, they will
+be evaluated based on the number of participants’ visits and business
+revenue. We will also use cycle plot and time-series line graph to
+illustrate the different number of visits and revenue of a restaurant or
+pub during the whole given period. To have an overall view of the
+business performance, user can compare the revenue and number of visits
+among the businesses, by simply filtering the category and period of
+time. Once the users want to have more detail of a specific pub or
+restaurant ID, they can input the ID on this page to find out the
+performance movement in revenue and number of visit.</p>
 </div>
 <div id="financial-health" class="section level2">
 <h2>Financial Health</h2>
 <p>According to Investopedia, the measurement financial health includes
 the amount of savings as well as the spending on fixed or
 non-discretionary expenses.</p>
-<p><strong>Monthly average savings</strong></p>
-<p>Build up a table taking summing up the transaction amounts grouped by
-participantID and month. Use barchart / linechart to represent the
-change over time. Facet wraps are adopted for comparison across
-different groups such as education level and age.</p>
-<p><strong>Expenditure structure</strong></p>
-<p>Group the financial journal into major categories and compare the
-total expenditure with monthly income. A stacked barchart would be to
-reveal the proportion and comparison.</p>
+<p><strong>Wages Vs. Overall cost of living</strong> In order to conduct
+a horizontal comparison of participants with different attributes, an
+interactive scatterplot would be used to show the average salary &amp;
+living cost. Each participant would be represented as a point in the
+plot. In order to show the trend overtime, an animated bubble plot would
+be adopted to display the distribution of wages as well as living
+expenditure. Multiple colours would be used to differentiate the
+participants by different groups so as to show comparison.</p>
+<p><strong>Monthly average balance</strong> Build up a table taking
+summing up the transaction amounts grouped by participantID and month.
+Use linechart to represent the change over time. Facet wraps are adopted
+for comparison across different groups such as education level and
+age.</p>
+<p><strong>Expenditure structure</strong> Group the financial journal
+into major categories and compare the total expenditure with monthly
+income. An interactive cycle plot with lines in all four spending
+categories would be to reveal the proportion and comparison.</p>
 </div>
 <div id="employment-health" class="section level2">
 <h2>Employment health</h2>
@@ -358,21 +402,24 @@ reveal the proportion and comparison.</p>
 multi-pronged approach will be considered. As the employment patterns
 and employer health both are correlative of turnover, so we prefer to
 start from turnover calculation at first. Then conduct using tmap
-package, sf package to visualize employer distribution by turnover rate.
-At last, looking into different attributes of employee (age, education
-level, salary base, etc.) by different turnover level to identify
-employer health and employment patterns.</p>
-<p><strong>Distribution of employer by turnover rate</strong></p>
-<p>Complete turnover computation and leveraging hexagon binning map to
-show up turnover rate by color and add DT table to interactively
-displaying detail information of the company.</p>
-<p><strong>Employment pattern exploration</strong></p>
-<p>Analyze employee structure from age, education, salary perspectives
-to identify employment patterns. For age portion, use violin and box
-plot to recognize distribution. For education level, we will conduct
-staked bar chart with percent information. For salary portion, we will
-apply to line charts to display whether there’s fluctuation among
-education levels.</p>
+package, sf package to visualize employer distribution by turnover rate
+on city map, highlight higher rate with light color. At last, looking
+into different attributes of employee age by using boxplot and violin
+plot, by education level using stacked plot, by salary base using
+density ridges to identify employer health and employment patterns.</p>
+<p><strong>Distribution of employer by turnover rate</strong> As per
+research, turnover rate is defined as the percentage of employees who
+left a company over a certain period of time. It’s often described in
+relation to employee retention rate. So, we will apply total turnover
+times of particular period / Total employee number this company ever
+employed of this particular time as turnover rate.</p>
+<p><strong>Employment pattern exploration</strong> Analyse employee
+structure from age, education, salary perspectives to identify
+employment patterns. For age portion, use violin and box plot to
+recognize distribution. For education level, we will conduct staked bar
+chart with percent information. For salary portion, we will apply to
+line charts to display whether there’s fluctuation among education
+levels.</p>
 <p>Scripts can be viewed <a
 href="Proposal/Scripts.pdf"><code>here</code></a></p>
 </div>
