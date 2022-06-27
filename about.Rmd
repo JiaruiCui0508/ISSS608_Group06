@@ -1,5 +1,6 @@
 ---
-title: "About this site"
+title: "About this us"
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
@@ -7,3 +8,25 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-left: 10px;
+}
+
+</style>
+
+</div>
+<div class="col-sm-6">
+![](Group6/city.jpeg)
+
+
+<div class="row" style="margin-right: 10px;">
+
+# **Description**{style="padding-top: 0px;"}
+
+  Anticipating rapid growth, the city of Engagement, Ohio USA is doing a participatory urban planning exercise to understand the current state of the city and identify opportunities for future growth. About 1000 representative residents in this modest-sized city have agreed to provide data using the city’s urban planning app, which records the places they visit, their spending, and their purchases, among other things. From these volunteers, the city will have data to assist with their major community revitalization efforts, including how to allocate a very large city renewal grant they have recently received. 
+  
