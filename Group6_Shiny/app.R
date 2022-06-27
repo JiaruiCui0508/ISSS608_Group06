@@ -83,7 +83,10 @@ ui <- navbarPage(title = h4("Group 6"),position="fixed-top",
                                            selectInput(inputId = "variable",
                                                        label = "Select ID:",
                                                        choices = Total_ID[, c('pubId')],
-                                                       selected = '442')
+                                                       selected = '442'),
+                                           dateRangeInput("Date_range2", "Date range:",
+                                                          start = "2022-03-01",
+                                                          end   = "2023-04-30")
                                          ),
                                          mainPanel(
                                            plotOutput("Revenue")
@@ -98,7 +101,10 @@ ui <- navbarPage(title = h4("Group 6"),position="fixed-top",
                                            selectInput(inputId = "variable2",
                                                        label = "Select ID:",
                                                        choices = Total_ID[, c('pubId')],
-                                                       selected = '442')
+                                                       selected = '442'),
+                                           dateRangeInput("Date_range", "Date range:",
+                                                          start = "2022-03-01",
+                                                          end   = "2023-04-30")
                                          ),
                                          mainPanel(
                                            plotOutput("visit")
@@ -114,7 +120,7 @@ server <- function(input,output){
   
   output$visit <- renderPlot({
     select_ID <- CheckinJournal_group %>% 
-      filter(venueId==input$variable2)
+      filter(venueId==input$variable2,Dates>=input$Date_range[1] & Dates<=input$Date_range[2])
     
     p <- ggplot(select_ID, aes(x=Dates, y=n)) +
       geom_line() + 
@@ -144,7 +150,7 @@ server <- function(input,output){
   
   output$Revenue <- renderPlot({
     select_ID <- CheckinJournal_group %>% 
-      filter(venueId==input$variable)
+      filter(venueId==input$variable,Dates>=input$Date_range2[1] & Dates<=input$Date_range2[2])
     
     j <- ggplot(select_ID, aes(x=Dates, y=revenue)) +
       geom_line() + 
@@ -173,7 +179,7 @@ server <- function(input,output){
   })
   
   output$Summary <- renderTrelliscope({ 
-    CheckinJournal_group_sum <- ggplot(CheckinJournal_group2, aes(x= as.factor(yearmonth), y= revenue)) +
+    CheckinJournal_group_sum <- ggplot(CheckinJournal_group, aes(x= as.factor(yearmonth), y= revenue)) +
       geom_col(fill= '#008080') +
       labs(x= 'Month Year', y= 'n\revenue',
            title = 'Monthly Customer Visits and revenue') +
@@ -195,4 +201,3 @@ server <- function(input,output){
 
 
 shinyApp(ui = ui, server = server)
-
