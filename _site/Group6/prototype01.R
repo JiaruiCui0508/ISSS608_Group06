@@ -173,7 +173,7 @@ server <- function(input,output){
   })
 
     output$Summary <- renderTrelliscope({ 
-      CheckinJournal_group_sum <- ggplot(CheckinJournal_group2, aes(x= as.factor(yearmonth), y= revenue)) +
+      CheckinJournal_group_sum <- ggplot(CheckinJournal_group, aes(x= as.factor(yearmonth), y= revenue)) +
         geom_col(fill= '#008080') +
         labs(x= 'Month Year', y= 'n\revenue',
              title = 'Monthly Customer Visits and revenue') +
