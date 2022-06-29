@@ -1,0 +1,49 @@
+---
+output: html_document
+---
+
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+# **User Guide**{style="padding-top: 0px;"}
+
+Our app allows user to understand and visualise the business performance, financial health, and employment health of the city of Engagement, Ohio. 
+
+In our ShinyApp we will address below questions:
+
+**1.	Over the period covered by the dataset, which businesses appear to be more prosperous? Which appear to be struggling?**
+
+Trelliscope: Overview and comparison of all pubs and restaurants based on their visit and revenue
+
+Time Series Plot & Cycle plot of visit: Provide details of number of visits for selected venue id
+
+Time Series Plot & Cycle plot of revenue: Provide details of revenues for selected venue id
+
+**2.	How does the financial health of the residents change over the period covered by the dataset? How do wages compare to the overall cost of living in Engagement? Are there groups that appear to exhibit similar patterns?**
+
+
+**3.	Describe the health of the various employers within the city limits. What employment patterns do you observe?**
+
+Geographic Graph : Provide an overview of employer turnover rate distribution of the city of Engagement.
+
+DT Table : Provide employer detail entry of selected specific Company Turnover Level.
+
+Stacked Plot : Provide an over view of employer employment factor by Turnover Level.
+ 
+  
+</div>
+<div class="col-sm-6">
+[![userguide](Group6/userguide.JPG)](Proposal/Scripts.pdf)
+![](Group6/rpackage.JPG)
