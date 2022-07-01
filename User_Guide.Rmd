@@ -33,6 +33,14 @@ Time Series Plot & Cycle plot of revenue: Provide details of revenues for select
 
 **2.	How does the financial health of the residents change over the period covered by the dataset? How do wages compare to the overall cost of living in Engagement? Are there groups that appear to exhibit similar patterns?**
 
+Linechart of monthly balance: Provide the comparison of average monthly balance overtime across different groups
+
+Interactive Scatter plot: Provide comparison of wage and cost of living acrooss different groups
+
+Animated bubble plot: Provide overview of wage and cost trend overtime
+
+Cycle plot of expenditure: Provide details of expenditure in categories
+
 
 **3.	Describe the health of the various employers within the city limits. What employment patterns do you observe?**
 
