@@ -7,7 +7,7 @@ navbar:
     - text: "Proposal"
       href: Proposal1.html
     - text: "Poster"
-      href: Proposal/Scripts.pdf
+      href: Group6/Poster.pdf
     - text: "Application"
       href: https://sherrycui.shinyapps.io/Group6_Shiny/
     - text: "Application User Guide"
