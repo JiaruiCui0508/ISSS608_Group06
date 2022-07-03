@@ -53,5 +53,5 @@ Stacked Plot : Provide an over view of employer employment factor by Turnover Le
   
 </div>
 <div class="col-sm-6">
-[![userguide](Group6/userguide.JPG)](Proposal/Scripts.pdf)
+[![userguide](Group6/userguide.JPG)](Group6/Data/User_guide.pdf)
 ![](Group6/rpackage.JPG)
