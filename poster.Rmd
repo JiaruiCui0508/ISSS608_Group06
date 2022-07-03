@@ -1,7 +1,0 @@
----
-output: html_document
----
-
-![](Proposal/Scripts.pdf){width="700" height="2200"}
-
-
